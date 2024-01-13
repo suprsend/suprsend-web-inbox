@@ -4,7 +4,7 @@ This package is used for non react web applications. For react appliction use [@
 
 ### Documentation
 
-For full documentation on this refer: [Web Inbox](https://docs.suprsend.com/docs/node)
+For full documentation refer: [Web Inbox](https://docs.suprsend.com/docs/node)
 
 ### Quick Setup
 
