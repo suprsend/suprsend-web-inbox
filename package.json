@@ -1,0 +1,29 @@
+{
+  "name": "@suprsend/web-inbox",
+  "version": "0.1.0",
+  "description": "Embeddable inbox which can be used in website using script tag",
+  "main": "dist/bundle.js",
+  "module": "dist/bundle.esm.js",
+  "scripts": {
+    "build:browser": "webpack --env type=browser",
+    "build:module": "webpack --env type=module",
+    "build:esm": "webpack --env type=esm",
+    "build": "npm run build:module && npm run build:browser && npm run build:esm",
+    "start": "webpack --watch"
+  },
+  "keywords": [],
+  "author": "SuprSend Developers",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.23.7",
+    "@babel/preset-env": "^7.23.8",
+    "@babel/preset-react": "^7.23.3",
+    "@suprsend/react-inbox": "^2.1.0",
+    "babel-loader": "^9.1.3",
+    "preact": "^10.19.3"
+  },
+  "devDependencies": {
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  }
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Welcome to SuprSend</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="" />
+  </head>
+  <body>
+    <h1>Welcome to SuprSend</h1>
+    <div id="suprsend-inbox"></div>
+  </body>
+  <script type="text/javascript">
+    function initializeSuprSend(distinctId, subscriberId) {
+      window.suprSendConfig = {
+        workspaceKey: "your_workspace_key",
+        distinctId: distinctId,
+        subscriberId: subscriberId,
+      };
+
+      let scriptElem = document.createElement("script");
+      scriptElem.async = 1;
+      scriptElem.src = "http://127.0.0.1:5500/dist-cdn/v0.1.0.js";
+      document.body.appendChild(scriptElem);
+    }
+
+    initializeSuprSend("your_distinct_id", "your_subscriber_id");
+  </script>
+</html>
