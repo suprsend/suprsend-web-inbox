@@ -2,6 +2,10 @@
 
 This package is used to integrate inbox channel in non react applications. For react application use [@suprsend/react-inbox](https://docs.suprsend.com/docs/inbox-react).
 
+### Documentation
+
+Documentation can be found here: https://docs.suprsend.com/docs/embeddable-inbox
+
 ### Integrate using script tag
 
 This solution works if you are using applications like Django, Laravel, ruby.
