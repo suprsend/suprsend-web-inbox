@@ -33,8 +33,7 @@ export function initSuprSendInbox(targetElem, config) {
   );
 }
 
-export function clearSuprSend() {
-  const targetElem = document.getElementById("suprsend-inbox");
+export function cleanSuprSend(targetElem) {
   if (!targetElem) return;
   unmountComponentAtNode(targetElem);
 }

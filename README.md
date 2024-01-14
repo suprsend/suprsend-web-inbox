@@ -1,6 +1,6 @@
 # @suprsend/web-inbox
 
-This package is used for non react web applications. For react appliction use [@suprsend/react-inbox](https://docs.suprsend.com/docs/inbox-react)
+This package is used for non react web applications. For react application use [@suprsend/react-inbox](https://docs.suprsend.com/docs/inbox-react)
 
 ### Documentation
 
