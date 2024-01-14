@@ -32,7 +32,7 @@ Add below snippet in html file
 </script>
 ```
 
-In above code replate `your_distinct_id`, `your_subscriber_id`,
+In above code replace `your_distinct_id`, `your_subscriber_id`,
 `your_workspace_key` and `SPECIFIC_VERSION` variables with valid values
 
 ### License MIT © [https://github.com/suprsend](https://github.com/suprsend)
