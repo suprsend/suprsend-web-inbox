@@ -9,7 +9,8 @@
     "build:module": "webpack --env type=module",
     "build:esm": "webpack --env type=esm",
     "build": "npm run build:module && npm run build:browser && npm run build:esm",
-    "start": "webpack --watch"
+    "start": "webpack --watch",
+    "publish_sdk": "npm run build && npm publish"
   },
   "keywords": [],
   "author": "SuprSend Developers",

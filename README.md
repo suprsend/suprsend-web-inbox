@@ -25,7 +25,7 @@ This solution works if you are using applications like Django, Laravel, ruby.
     let scriptElem = document.createElement("script");
     scriptElem.async = 1;
     scriptElem.src =
-      "https://web-inbox-assets.suprsend.com/v{SPECIFIC_VERSION}.js";
+      "https://web-inbox-assets.suprsend.com/v0.3.0.js";
     document.body.appendChild(scriptElem);
   }
 
@@ -45,11 +45,11 @@ Example code: <https://github.com/suprsend/suprsend-web-inbox/blob/main/index.ht
 This solution work if you are using applications like angular, vue etc. If you are using server side rendering frameworks then render this inbox component after mounting on client side.
 
 ```shell npm
-npm install @suprsend/web-inbox
+npm install @suprsend/web-inbox@latest
 ```
 
 ```shell yarn
-yarn add @suprsend/web-inbox
+yarn add @suprsend/web-inbox@latest
 ```
 
 ```javascript
