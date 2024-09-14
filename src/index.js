@@ -1,6 +1,7 @@
 import React from "react";
 import { render, unmountComponentAtNode } from "react-dom";
 import SuprSendInbox from "@suprsend/react-inbox";
+import "react-toastify/dist/ReactToastify.css";
 
 export function initSuprSendInbox(targetElem, config) {
   if (
@@ -25,6 +26,8 @@ export function initSuprSendInbox(targetElem, config) {
       hideInbox={config?.hideInbox}
       hideToast={config?.hideToast}
       notificationClickHandler={config?.notificationClickHandler}
+      primaryActionClickHandler={config?.primaryActionClickHandler}
+      secondaryActionClickHandler={config?.secondaryActionClickHandler}
       popperPosition={config?.popperPosition}
       theme={config?.theme}
       toastProps={config?.toastProps}
