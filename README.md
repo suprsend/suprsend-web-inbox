@@ -102,6 +102,8 @@ interface ISuprSendInboxConfig {
   hideToast?: boolean
   hideAvatar?: boolean
   notificationClickHandler?: (notificationData: any) => void
+  primaryActionClickHandler?: (notificationData: any) => void
+  secondaryActionClickHandler?: (notificationData: any) => void
   toastProps?: IToastProps
   theme?: Dictionary
   popperPosition?: 'top' | 'bottom' | 'left' | 'right'
