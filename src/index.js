@@ -3,6 +3,48 @@ import { render, unmountComponentAtNode } from "react-dom";
 import SuprSendInbox from "@suprsend/react-inbox";
 import "react-toastify/dist/ReactToastify.css";
 
+function CustomHeaderRightComponent({ markAllRead, config }) {
+  return (
+    <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+      <p
+        style={{
+          fontWeight: 600,
+          fontSize: 16,
+          color: "#2E70E8",
+          fontSize: 12,
+          cursor: "pointer",
+          fontFamily:
+            "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+          margin: 0,
+          ...(config?.theme?.header?.markAllReadText || {}),
+        }}
+        onClick={(e) => {
+          e.stopPropagation();
+          markAllRead();
+        }}
+      >
+        Mark all as read
+      </p>
+      {config?.headerIconUrl && (
+        <img
+          src={config.headerIconUrl}
+          alt="header image"
+          style={{
+            height: 18,
+            width: 18,
+            cursor: "pointer",
+            ...(config?.theme?.header?.headerIcon || {}),
+          }}
+          onClick={(e) => {
+            e.stopPropagation();
+            config?.headerIconClickHandler?.();
+          }}
+        />
+      )}
+    </div>
+  );
+}
+
 export function initSuprSendInbox(targetElem, config) {
   if (
     !targetElem ||
@@ -18,6 +60,7 @@ export function initSuprSendInbox(targetElem, config) {
       workspaceKey={config.workspaceKey}
       distinctId={config.distinctId}
       subscriberId={config.subscriberId}
+      host={config?.host}
       tenantId={config?.tenantId}
       stores={config?.stores}
       pageSize={config?.pageSize}
@@ -31,6 +74,9 @@ export function initSuprSendInbox(targetElem, config) {
       popperPosition={config?.popperPosition}
       theme={config?.theme}
       toastProps={config?.toastProps}
+      headerRightComponent={({ markAllRead }) => (
+        <CustomHeaderRightComponent config={config} markAllRead={markAllRead} />
+      )}
     />,
     targetElem
   );
