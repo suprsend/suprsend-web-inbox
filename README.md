@@ -107,6 +107,8 @@ interface ISuprSendInboxConfig {
   toastProps?: IToastProps
   theme?: Dictionary
   popperPosition?: 'top' | 'bottom' | 'left' | 'right'
+  headerIconUrl?: URL
+  headerIconClickHandler?: () => void
 }
 ```
 
@@ -121,6 +123,10 @@ const suprSendConfig = {
   theme: {
     bell: { color: "blue" },
     badge: { backgroundColor: "red", color: "black" },
+    header: {
+      markAllReadText: { color: "red" },
+      headerIcon: { color: "pink" },
+    },
   },
 };
 ```
