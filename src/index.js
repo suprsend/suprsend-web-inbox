@@ -3,7 +3,10 @@ import { render, unmountComponentAtNode } from "react-dom";
 import SuprSendInbox from "@suprsend/react-inbox";
 import "react-toastify/dist/ReactToastify.css";
 
-function CustomHeaderRightComponent({ markAllRead, config }) {
+function CustomHeaderRightComponent({ markAllRead, config, language }) {
+  const markAllAsReadText =
+    language === "fr" ? "Marquer tout comme lu" : "Mark all as read";
+
   return (
     <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
       <p
@@ -23,7 +26,7 @@ function CustomHeaderRightComponent({ markAllRead, config }) {
           markAllRead();
         }}
       >
-        Mark all as read
+        {markAllAsReadText}
       </p>
       {config?.headerIconUrl && (
         <img
@@ -68,6 +71,7 @@ export function initSuprSendInbox(targetElem, config) {
       themeType={config?.themeType}
       hideInbox={config?.hideInbox}
       hideToast={config?.hideToast}
+      language={config?.language}
       notificationClickHandler={config?.notificationClickHandler}
       primaryActionClickHandler={config?.primaryActionClickHandler}
       secondaryActionClickHandler={config?.secondaryActionClickHandler}
@@ -75,7 +79,11 @@ export function initSuprSendInbox(targetElem, config) {
       theme={config?.theme}
       toastProps={config?.toastProps}
       headerRightComponent={({ markAllRead }) => (
-        <CustomHeaderRightComponent config={config} markAllRead={markAllRead} />
+        <CustomHeaderRightComponent
+          config={config}
+          markAllRead={markAllRead}
+          language={config?.language}
+        />
       )}
     />,
     targetElem
