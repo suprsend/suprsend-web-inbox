@@ -1,6 +1,6 @@
 {
   "name": "@suprsend/web-inbox",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "Embeddable inbox which can be used in website using script tag",
   "main": "dist/bundle.js",
   "module": "dist/bundle.esm.js",

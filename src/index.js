@@ -5,7 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 function CustomHeaderRightComponent({ markAllRead, config, language }) {
   const markAllAsReadText =
-    language === "fr" ? "Marquer tout comme lu" : "Mark all as read";
+    language === "fr" ? "Tout marquer comme lu" : "Mark all as read";
 
   return (
     <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
