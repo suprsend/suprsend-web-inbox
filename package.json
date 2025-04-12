@@ -1,6 +1,6 @@
 {
   "name": "@suprsend/web-inbox",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "description": "Embeddable inbox which can be used in website using script tag",
   "main": "dist/bundle.js",
   "module": "dist/bundle.esm.js",
@@ -23,7 +23,7 @@
     "url": "https://github.com/suprsend/suprsend-web-inbox.git"
   },
   "dependencies": {
-    "@suprsend/react-inbox": "^3.8.1",
+    "@suprsend/react-inbox": "^3.9.0",
     "preact": "^10.19.3"
   },
   "devDependencies": {
