@@ -1,5 +1,9 @@
 ## @suprsend/web-inbox
 
+> 📘 End of Support for `@suprsend/web-inbox`. Migrate to [@suprsend/web-components](https://docs.suprsend.com/docs/web-components-integration#integration)
+>
+> We have changed the SDK authentication from HMAC based authentication to JWT based authentication in new SDK. This is done to improve security in frontend applications.
+
 **@suprsend/web-inbox** is used to integrate inbox channel in non react applications. For react application use [@suprsend/react-inbox](https://docs.suprsend.com/docs/inbox-react).
 
 ### Integrate using script tag
