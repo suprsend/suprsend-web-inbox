@@ -6,6 +6,8 @@
 
 **@suprsend/web-inbox** is used to integrate inbox channel in non react applications. For react application use [@suprsend/react-inbox](https://docs.suprsend.com/docs/inbox-react).
 
+**NOTE:** Guide on integrating this SDK in Angular framework can be found [here](https://github.com/suprsend/suprsend-web-inbox/blob/main/docs/angular-integration.md)
+
 ### Integrate using script tag
 
 This solution works if you are using applications like Django, Laravel, ruby.
