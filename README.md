@@ -80,16 +80,16 @@ cleanSuprSend(targetElement);
 
 For **suprSendConfig** (script and npm package) you can pass other options to customize.
 
-| Field        | Type                 | Description                                                                                                                                                           |
-| :----------- | :------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| workspaceKey | string (Mandatory)   | You can find it in SuprSend Dashboard inside _Settings -> API Keys_.                                                                                                  |
-| distinctId   | any (Mandatory)      | Unique identifier for the user.                                                                                                                                       |
-| subscriberId | string (Mandatory)   | This is unique string for every distinctId used for authentication to inbox service. You check [generation docs](https://docs.suprsend.com/docs/hmac-authentication). |
-| tenantId     | string (Optional)    | If you use multi-tenant architecture you can get inbox notifications for that specific tenant/brand only.                                                             |
-| stores       | IStore\[] (Optional) | Pass stores array if you ant to use [multi-tab feature](https://docs.suprsend.com/docs/multi-tabs).                                                                   |
-| pageSize     | number (Optional)    | Notifications to get in one api call. Used for pagination to get older notifications. Maximum allowed is 50. Defaults to 20.                                          |
-| pagination   | boolean (Optional)   | By default infinite scroll will be enabled to get older notifications on scroll. It can be disabled by passing false.                                                 |
-| language     | fr / en (Optional)   | Currently we support french and english languages. Please reach out to us if you need any other language requirement.                                                 |
+| Field        | Type                 | Description                                                                                                                                                                                        |
+| :----------- | :------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| workspaceKey | string (Mandatory)   | You can find it in SuprSend Dashboard inside _Settings -> API Keys_.                                                                                                                               |
+| distinctId   | any (Mandatory)      | Unique identifier for the user.                                                                                                                                                                    |
+| subscriberId | string (Mandatory)   | This is unique string for every distinctId used for authentication to inbox service. You check [generation docs](https://github.com/suprsend/suprsend-web-inbox/blob/main/docs/authentication.md). |
+| tenantId     | string (Optional)    | If you use multi-tenant architecture you can get inbox notifications for that specific tenant/brand only.                                                                                          |
+| stores       | IStore\[] (Optional) | Pass stores array if you ant to use [multi-tab feature](https://github.com/suprsend/suprsend-web-inbox/blob/main/docs/multi-tab.md).                                                               |
+| pageSize     | number (Optional)    | Notifications to get in one api call. Used for pagination to get older notifications. Maximum allowed is 50. Defaults to 20.                                                                       |
+| pagination   | boolean (Optional)   | By default infinite scroll will be enabled to get older notifications on scroll. It can be disabled by passing false.                                                                              |
+| language     | fr / en (Optional)   | Currently we support french and english languages. Please reach out to us if you need any other language requirement.                                                                              |
 
 Other UI based options are:
 
@@ -240,5 +240,3 @@ const themeExample = {
   },
 };
 ```
-
-**Customization Details**: More details about these UI customization props can be found [here](https://docs.suprsend.com/docs/react-customize-inbox).
